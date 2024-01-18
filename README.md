@@ -87,7 +87,7 @@ bool = isSameValueZerof( NaN, NaN );
 // returns true
 ```
 
-In contrast to the [SameValue Algorithm][ecma-262-same-value-algorithm] (as specified in ECMAScript 5), the function does not distinguish between `+0` and `-0`.
+In contrast to the [SameValue Algorithm][@stdlib/number/float32/base/assert/is-same-value] (as specified in ECMAScript 5), the function does not distinguish between `+0` and `-0`.
 
 <!-- eslint-disable no-compare-neg-zero -->
 
@@ -319,7 +319,7 @@ Copyright &copy; 2016-2024. The Stdlib [Authors][stdlib-authors].
 
 [stdlib-license]: https://raw.githubusercontent.com/stdlib-js/number-float32-base-assert-is-same-value-zero/main/LICENSE
 
-[ecma-262-same-value-algorithm]: http://ecma-international.org/ecma-262/5.1/#sec-9.12
+[@stdlib/number/float32/base/assert/is-same-value]: https://github.com/stdlib-js/stdlib
 
 </section>
 
