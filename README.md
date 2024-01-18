@@ -319,7 +319,7 @@ Copyright &copy; 2016-2024. The Stdlib [Authors][stdlib-authors].
 
 [stdlib-license]: https://raw.githubusercontent.com/stdlib-js/number-float32-base-assert-is-same-value-zero/main/LICENSE
 
-[@stdlib/number/float32/base/assert/is-same-value]: https://github.com/stdlib-js/stdlib
+[@stdlib/number/float32/base/assert/is-same-value]: https://github.com/stdlib-js/number-float32-base-assert-is-same-value
 
 </section>
 
