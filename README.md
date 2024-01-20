@@ -42,7 +42,7 @@ limitations under the License.
 ## Usage
 
 ```javascript
-import isSameValueZerof from 'https://cdn.jsdelivr.net/gh/stdlib-js/number-float32-base-assert-is-same-value-zero@esm/index.mjs';
+import isSameValueZerof from 'https://cdn.jsdelivr.net/gh/stdlib-js/number-float32-base-assert-is-same-value-zero@v0.1.0-esm/index.mjs';
 ```
 
 #### isSameValueZerof( a, b )
@@ -109,7 +109,7 @@ bool = isSameValueZerof( -0.0, 0.0 );
 <script type="module">
 
 import toFloat32 from 'https://cdn.jsdelivr.net/gh/stdlib-js/number-float64-base-to-float32@esm/index.mjs';
-import isSameValueZerof from 'https://cdn.jsdelivr.net/gh/stdlib-js/number-float32-base-assert-is-same-value-zero@esm/index.mjs';
+import isSameValueZerof from 'https://cdn.jsdelivr.net/gh/stdlib-js/number-float32-base-assert-is-same-value-zero@v0.1.0-esm/index.mjs';
 
 var bool = isSameValueZerof( toFloat32( 3.14 ), toFloat32( 3.14 ) );
 // returns true
