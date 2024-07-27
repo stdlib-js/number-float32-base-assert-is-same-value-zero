@@ -42,7 +42,7 @@ limitations under the License.
 ## Usage
 
 ```javascript
-import isSameValueZerof from 'https://cdn.jsdelivr.net/gh/stdlib-js/number-float32-base-assert-is-same-value-zero@deno/mod.js';
+import isSameValueZerof from 'https://cdn.jsdelivr.net/gh/stdlib-js/number-float32-base-assert-is-same-value-zero@v0.2.1-deno/mod.js';
 ```
 
 #### isSameValueZerof( a, b )
@@ -104,7 +104,7 @@ bool = isSameValueZerof( -0.0, 0.0 );
 
 ```javascript
 import toFloat32 from 'https://cdn.jsdelivr.net/gh/stdlib-js/number-float64-base-to-float32@deno/mod.js';
-import isSameValueZerof from 'https://cdn.jsdelivr.net/gh/stdlib-js/number-float32-base-assert-is-same-value-zero@deno/mod.js';
+import isSameValueZerof from 'https://cdn.jsdelivr.net/gh/stdlib-js/number-float32-base-assert-is-same-value-zero@v0.2.1-deno/mod.js';
 
 var bool = isSameValueZerof( toFloat32( 3.14 ), toFloat32( 3.14 ) );
 // returns true
