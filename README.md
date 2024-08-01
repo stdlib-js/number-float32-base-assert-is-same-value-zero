@@ -35,43 +35,32 @@ limitations under the License.
 
 > Test if two single-precision floating-point numbers are the same value.
 
+<section class="installation">
 
+## Installation
+
+```bash
+npm install @stdlib/number-float32-base-assert-is-same-value-zero
+```
+
+Alternatively,
+
+-   To load the package in a website via a `script` tag without installation and bundlers, use the [ES Module][es-module] available on the [`esm`][esm-url] branch (see [README][esm-readme]).
+-   If you are using Deno, visit the [`deno`][deno-url] branch (see [README][deno-readme] for usage intructions).
+-   For use in Observable, or in browser/node environments, use the [Universal Module Definition (UMD)][umd] build available on the [`umd`][umd-url] branch (see [README][umd-readme]).
+
+The [branches.md][branches-url] file summarizes the available branches and displays a diagram illustrating their relationships.
+
+To view installation and usage instructions specific to each branch build, be sure to explicitly navigate to the respective README files on each branch, as linked to above.
+
+</section>
 
 <section class="usage">
 
 ## Usage
 
-To use in Observable,
-
 ```javascript
-isSameValueZerof = require( 'https://cdn.jsdelivr.net/gh/stdlib-js/number-float32-base-assert-is-same-value-zero@umd/browser.js' )
-```
-The previous example will load the latest bundled code from the umd branch. Alternatively, you may load a specific version by loading the file from one of the [tagged bundles](https://github.com/stdlib-js/number-float32-base-assert-is-same-value-zero/tags). For example,
-
-```javascript
-isSameValueZerof = require( 'https://cdn.jsdelivr.net/gh/stdlib-js/number-float32-base-assert-is-same-value-zero@v0.2.1-umd/browser.js' )
-```
-
-To vendor stdlib functionality and avoid installing dependency trees for Node.js, you can use the UMD server build:
-
-```javascript
-var isSameValueZerof = require( 'path/to/vendor/umd/number-float32-base-assert-is-same-value-zero/index.js' )
-```
-
-To include the bundle in a webpage,
-
-```html
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/number-float32-base-assert-is-same-value-zero@umd/browser.js"></script>
-```
-
-If no recognized module system is present, access bundle contents via the global scope:
-
-```html
-<script type="text/javascript">
-(function () {
-    window.isSameValueZerof;
-})();
-</script>
+var isSameValueZerof = require( '@stdlib/number-float32-base-assert-is-same-value-zero' );
 ```
 
 #### isSameValueZerof( a, b )
@@ -131,14 +120,9 @@ bool = isSameValueZerof( -0.0, 0.0 );
 
 <!-- eslint no-undef: "error" -->
 
-```html
-<!DOCTYPE html>
-<html lang="en">
-<body>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/number-float64-base-to-float32@umd/browser.js"></script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/number-float32-base-assert-is-same-value-zero@umd/browser.js"></script>
-<script type="text/javascript">
-(function () {
+```javascript
+var toFloat32 = require( '@stdlib/number-float64-base-to-float32' );
+var isSameValueZerof = require( '@stdlib/number-float32-base-assert-is-same-value-zero' );
 
 var bool = isSameValueZerof( toFloat32( 3.14 ), toFloat32( 3.14 ) );
 // returns true
@@ -151,11 +135,6 @@ bool = isSameValueZerof( toFloat32( -0.0 ), toFloat32( 0.0 ) );
 
 bool = isSameValueZerof( toFloat32( NaN ), toFloat32( NaN ) );
 // returns true
-
-})();
-</script>
-</body>
-</html>
 ```
 
 </section>
@@ -164,7 +143,106 @@ bool = isSameValueZerof( toFloat32( NaN ), toFloat32( NaN ) );
 
 <!-- C interface documentation. -->
 
+* * *
 
+<section class="c">
+
+## C APIs
+
+<!-- Section to include introductory text. Make sure to keep an empty line after the intro `section` element and another before the `/section` close. -->
+
+<section class="intro">
+
+</section>
+
+<!-- /.intro -->
+
+<!-- C usage documentation. -->
+
+<section class="usage">
+
+### Usage
+
+```c
+#include "stdlib/number/float32/base/assert/is_same_value_zero.h"
+```
+
+#### stdlib_base_float32_is_same_value_zero( a, b )
+
+Tests if two single-precision floating-point numbers `a` and `b` are the same value.
+
+```c
+#include <stdbool.h>
+
+bool v = stdlib_base_float32_is_same_value_zero( 3.14f, 3.14f );
+// returns true
+
+v = stdlib_base_float32_is_same_value_zero( 0.0f, -0.0f );
+// returns true
+```
+
+The function accepts the following arguments:
+
+-   **a**: `[in] float` first input value.
+-   **b**: `[in] float` second input value.
+
+```c
+bool stdlib_base_float32_is_same_value_zero( const float a, const float b );
+```
+
+</section>
+
+<!-- /.usage -->
+
+<!-- C API usage notes. Make sure to keep an empty line after the `section` element and another before the `/section` close. -->
+
+<section class="notes">
+
+</section>
+
+<!-- /.notes -->
+
+<!-- C API usage examples. -->
+
+<section class="examples">
+
+### Examples
+
+```c
+#include "stdlib/number/float32/base/assert/is_same_value_zero.h"
+#include <stdbool.h>
+#include <stdio.h>
+
+int main( void ) {
+    const float a[] = {
+        5.0f,
+        -2.0f,
+        0.0f,
+        0.0f/0.0f
+    };
+    const float b[] = {
+        5.0f,
+        2.0f,
+        -0.0f,
+        0.0f/0.0f
+    };
+
+    bool v;
+    int i;
+    for ( i = 0; i < 4; i++ ) {
+        v = stdlib_base_float32_is_same_value_zero( a[ i ], b[ i ] );
+        printf( "Same value? %s\n", ( v ) ? "True" : "False" );
+    }
+}
+```
+
+</section>
+
+<!-- /.examples -->
+
+</section>
+
+<!-- /.c -->
 
 <!-- Section for related `stdlib` packages. Do not manually edit this section, as it is automatically populated. -->
 
@@ -193,11 +271,6 @@ For more information on the project, filing bug reports and feature requests, an
 
 ---
 
-## License
-
-See [LICENSE][stdlib-license].
-
-
 ## Copyright
 
 Copyright &copy; 2016-2024. The Stdlib [Authors][stdlib-authors].
@@ -213,11 +286,11 @@ Copyright &copy; 2016-2024. The Stdlib [Authors][stdlib-authors].
 [npm-image]: http://img.shields.io/npm/v/@stdlib/number-float32-base-assert-is-same-value-zero.svg
 [npm-url]: https://npmjs.org/package/@stdlib/number-float32-base-assert-is-same-value-zero
 
-[test-image]: https://github.com/stdlib-js/number-float32-base-assert-is-same-value-zero/actions/workflows/test.yml/badge.svg?branch=v0.2.1
-[test-url]: https://github.com/stdlib-js/number-float32-base-assert-is-same-value-zero/actions/workflows/test.yml?query=branch:v0.2.1
+[test-image]: https://github.com/stdlib-js/number-float32-base-assert-is-same-value-zero/actions/workflows/test.yml/badge.svg?branch=main
+[test-url]: https://github.com/stdlib-js/number-float32-base-assert-is-same-value-zero/actions/workflows/test.yml?query=branch:main
 
 [coverage-image]: https://img.shields.io/codecov/c/github/stdlib-js/number-float32-base-assert-is-same-value-zero/main.svg
-[coverage-url]: https://codecov.io/github/stdlib-js/number-float32-base-assert-is-same-value-zero?branch=v0.2.1
+[coverage-url]: https://codecov.io/github/stdlib-js/number-float32-base-assert-is-same-value-zero?branch=main
 
 <!--
 
@@ -244,9 +317,7 @@ Copyright &copy; 2016-2024. The Stdlib [Authors][stdlib-authors].
 [esm-readme]: https://github.com/stdlib-js/number-float32-base-assert-is-same-value-zero/blob/esm/README.md
 [branches-url]: https://github.com/stdlib-js/number-float32-base-assert-is-same-value-zero/blob/main/branches.md
 
-[stdlib-license]: https://raw.githubusercontent.com/stdlib-js/number-float32-base-assert-is-same-value-zero/main/LICENSE
-
-[@stdlib/number/float32/base/assert/is-same-value]: https://github.com/stdlib-js/number-float32-base-assert-is-same-value/tree/umd
+[@stdlib/number/float32/base/assert/is-same-value]: https://github.com/stdlib-js/number-float32-base-assert-is-same-value
 
 </section>
 
