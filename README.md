@@ -271,9 +271,14 @@ For more information on the project, filing bug reports and feature requests, an
 
 ---
 
+## License
+
+See [LICENSE][stdlib-license].
+
+
 ## Copyright
 
-Copyright &copy; 2016-2024. The Stdlib [Authors][stdlib-authors].
+Copyright &copy; 2016-2025. The Stdlib [Authors][stdlib-authors].
 
 </section>
 
@@ -316,6 +321,8 @@ Copyright &copy; 2016-2024. The Stdlib [Authors][stdlib-authors].
 [esm-url]: https://github.com/stdlib-js/number-float32-base-assert-is-same-value-zero/tree/esm
 [esm-readme]: https://github.com/stdlib-js/number-float32-base-assert-is-same-value-zero/blob/esm/README.md
 [branches-url]: https://github.com/stdlib-js/number-float32-base-assert-is-same-value-zero/blob/main/branches.md
+
+[stdlib-license]: https://raw.githubusercontent.com/stdlib-js/number-float32-base-assert-is-same-value-zero/main/LICENSE
 
 [@stdlib/number/float32/base/assert/is-same-value]: https://github.com/stdlib-js/number-float32-base-assert-is-same-value
 
